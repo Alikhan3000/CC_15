@@ -19,6 +19,8 @@
             padding: 15px;
             text-align: center;
             border: 1.5px solid brown;
+
+
         }
         #riskDashboard{
             border: 1.5px solid brown;
@@ -27,6 +29,7 @@
             padding: 25px;
             
         }
+       
 
 
 
@@ -39,7 +42,20 @@
    
 
     <form id = "addItemsFormHTML">  <!-- added an input form for adding new risk items.-->
+        <label for="riskName">Risk Name:</label>
+        <input type="text" name="riskName" id="riskName">
 
+        <!-- crated an HTML structure for risk name, risk level, and department -->
+        <label for="riskLevel">Risk Level:</label>
+        <select name="riskLevel" id="riskLevel">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+
+
+        <label for="department">Department:</label>
+        <input type="text" id="department" name="department">
 
         <button type="submit">Submit</button>
     </form>
