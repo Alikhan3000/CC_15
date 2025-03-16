@@ -29,6 +29,17 @@
             padding: 25px;
             
         }
+        /* created coloring for each risk level */
+        .low{
+            background-color: greenyellow;
+    
+        }
+        .med{
+            background-color:yellow;
+        }
+        .high{
+            background-color:crimson;
+        }
     
 
 
@@ -46,6 +57,7 @@
         <!-- crated an HTML structure for risk name, risk level, and department -->
         <label for="riskLevel">Risk Level:</label>
         <select name="riskLevel" id="riskLevel">
+            <!-- assigned risk levels using option tag -->
             <option value="High">High</option>
             <option value="Medium">Medium</option>
             <option value="Low">Low</option>

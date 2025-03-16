@@ -11,13 +11,24 @@ function addRiskItem(riskName, riskLevel, department){      //function with 3 va
     const riskItem = document.createElement("div");
     riskItem.classList.add("riskCard"); //assigned a class to each card
 
+//Task 3: Removing Risk Items
     const resolve =document.createElement("button");        //created a resolve button using createElement "button"
         resolve.textContent = "Resolve";
         resolve.classList.add("resolve-butt");
         resolve.addEventListener("click", ()=>{             //added an event listener that when clicked removes risk item div
             riskItem.remove();
         })
-    
+ 
+//Task 4: Categorizing Risks by Level
+
+if(riskLevel === "Low"){        
+    riskItem.classList.add("low")      //assigned a class based on every risk level
+} else if(riskLevel === "Medium"){
+    riskItem.classList.add("med")
+}else if(riskLevel === "High"){
+    riskItem.classList.add("high")
+}
+
 
 
 riskItem.innerHTML =                    //created a structure for the risk card using .innerHTML
@@ -47,3 +58,7 @@ addRiskItem("Data Breach", "High", "IT");
 addRiskItem("Supply Chain Disruption", "Medium", "Operations");
 //task 3 test case: Clicking "Resolve" should remove this risk from the dashboard.
 addRiskItem("Market Fluctuations", "High", "Finance");
+//Task 4: Categorizing Risks by Level
+//Test Case:
+addRiskItem("Cybersecurity Threat", "High", "IT");
+addRiskItem("HR Compliance Issue", "Low", "Human Resources");
