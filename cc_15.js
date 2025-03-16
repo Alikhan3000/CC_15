@@ -10,7 +10,10 @@ function addRiskItem(riskName, riskLevel, department){      //function with 3 va
 
     const riskItem = document.createElement("div");
     riskItem.classList.add("riskCard"); //assigned a class to each card
-
+    //Task 6: Handling Event Propagation
+    riskItem.addEventListener("click", (event)=>{   //Use stopPropagation() to ensure clicking inside a risk card does not trigger unwanted actions on the dashboard
+        event.stopPropagation()
+    })
 //Task 3: Removing Risk Items
     const resolve =document.createElement("button");        //created a resolve button using createElement "button"
         resolve.textContent = "Resolve";
